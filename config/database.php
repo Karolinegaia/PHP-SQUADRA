@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'oracle'),
 
     /*
     |--------------------------------------------------------------------------
@@ -77,6 +77,18 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
+        
+        'oracle' => [
+            'driver'         => 'oci8',
+            'host'           => env('DB_HOST', '127.0.0.1'),
+            'port'           => env('DB_PORT', '1521'),
+            'database'       => env('DB_DATABASE', ''),
+            'username'       => env('DB_USERNAME', ''),
+            'password'       => env('DB_PASSWORD', ''),
+            'charset'        => env('DB_CHARSET', 'AL32UTF8'),
+            'prefix'         => env('DB_PREFIX', ''),
+        ],
+        
 
     ],
 

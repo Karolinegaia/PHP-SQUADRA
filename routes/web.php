@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('uf', 'UfController@uf');
-Route::post('uf', 'UfController@uf');
-Route::put('uf', 'UfController@uf');
-Route::delete('uf/{codigoUf}', 'UfController@uf');
+Route::get('/uf', 'UfController@index');
+Route::post('/uf', 'UfController@store');
+Route::put('/uf', 'UfController@update');
+Route::delete('/uf/{codigo_uf}', 'UfController@destroy');
 
 Route::get('municipio', 'MunicipioController@municipio');
 Route::post('municipio', 'MunicipioController@municipio');

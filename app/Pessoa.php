@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
-class PessoaController extends Controller
+class Pessoa extends Model
 {
     protected $table = 'pessoas';
     public $incrementing = true;

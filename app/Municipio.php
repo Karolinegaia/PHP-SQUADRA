@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
-class BairroController extends Controller
+class Municipio extends Model
 {
     protected $table = 'municipios';
     protected $primaryKey = 'CODIGO_MUNICIPIO';
@@ -22,5 +22,4 @@ class BairroController extends Controller
     {
         return $this->hasMany('App\Bairro', 'CODIGO_MUNICIPIO', 'CODIGO_MUNICIPIO');
     }
-       
 }
